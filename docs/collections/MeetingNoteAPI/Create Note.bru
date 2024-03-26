@@ -1,0 +1,21 @@
+meta {
+  name: Create Note
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/meetingNotes/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "id": 2,
+      "title": "Team Sync-up",
+      "content": "Review progress on sprint tasks and discuss blockers",
+      "actionItems": ["Update task board", "Address technical debt"],
+      "createdDate": "2024-03-24T00:00:00.000Z"
+  }
+}

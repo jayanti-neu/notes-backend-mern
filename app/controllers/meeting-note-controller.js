@@ -1,4 +1,4 @@
-import * as meetingNotesService from './../services/meeting-notes-service'
+import * as meetingNotesService from './../services/meeting-notes-service.js'
 import {setResponse, setError} from './response-handlers.js'
 
 export const post = async (request, response) => {
@@ -14,7 +14,7 @@ export const post = async (request, response) => {
 export const findAll = async (request, response) => {
     try {
         const meetingNotes = await meetingNotesService.findAll();
-        return meetingNotes;
+        setResponse(meetingNotes, response);
     } catch(error){
         setError(error, response);
     }

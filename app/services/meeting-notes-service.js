@@ -5,8 +5,8 @@ import MeetingNote from './../models/meeting-note.js'
  * @param {*} meetingNote 
  * @returns 
  */
-export const save = async (meetingNote) => {
-    const meetingNote = new MeetingNote(meetingNote);
+export const save = async (note) => {
+    const meetingNote = new MeetingNote(note);
     return await meetingNote.save();
 }
 
