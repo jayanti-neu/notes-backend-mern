@@ -1,0 +1,17 @@
+meta {
+  name: Search Notes
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/meetingNotes/search/?keyword=task&startDate=2024-02-01&endDate=2024-12-31
+  body: none
+  auth: none
+}
+
+query {
+  keyword: task
+  startDate: 2024-02-01
+  endDate: 2024-12-31
+}

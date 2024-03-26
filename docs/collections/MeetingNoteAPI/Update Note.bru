@@ -1,0 +1,24 @@
+meta {
+  name: Update Note
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:3000/meetingNotes/66031df72c13a0a9012d9422
+  body: json
+  auth: none
+}
+
+body:json {
+  
+  {
+    "title": "Updated Meeting Title",
+    "content": "Updated meeting content.",
+    "actionItems": [
+      "Complete project tasks",
+      "Prepare presentation slides"
+    ],
+    "createdDate": "2024-03-27T12:00:00Z"
+  }
+}

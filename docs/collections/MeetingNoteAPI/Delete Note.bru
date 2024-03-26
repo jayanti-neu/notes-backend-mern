@@ -1,0 +1,24 @@
+meta {
+  name: Delete Note
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://localhost:3000/meetingNotes/66032fbd6e9cf75b9ec4d9a1
+  body: json
+  auth: none
+}
+
+body:json {
+  
+  {
+    "title": "Updated Meeting Title",
+    "content": "Updated meeting content.",
+    "actionItems": [
+      "Complete project tasks",
+      "Prepare presentation slides"
+    ],
+    "createdDate": "2024-03-27T12:00:00Z"
+  }
+}
