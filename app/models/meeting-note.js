@@ -20,7 +20,8 @@ const Schema = new mongoose.Schema({
     },
     createdDate: {
         type: Date,
-        required: true
+        required: false,
+        default: Date.now
     }
     
 });
