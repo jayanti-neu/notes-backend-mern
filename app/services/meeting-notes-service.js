@@ -15,7 +15,7 @@ export const save = async (meetingNote) => {
  * @param {*} params 
  * @returns 
  */
-export const find = async () => {
+export const findAll = async () => {
     const meetingNotes = await MeetingNote.find({});
     return meetingNotes;
 }
