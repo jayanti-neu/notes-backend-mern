@@ -1,6 +1,7 @@
 import * as meetingNotesService from './../services/meeting-notes-service.js'
 import {setResponse, setError} from './response-handlers.js'
 
+// 3.Add meeting note
 export const post = async (request, response) => {
     try {
         const note = {...request.body};
@@ -11,6 +12,7 @@ export const post = async (request, response) => {
     }
 }
 
+// 1.Returns all meeting notes
 export const findAll = async (request, response) => {
     try {
         const meetingNotes = await meetingNotesService.findAll();
@@ -20,6 +22,7 @@ export const findAll = async (request, response) => {
     }
 }
 
+// 2.Searches for meeting notes based on params sent. if no params returns all
 export const search = async (request, response) => {
     try {
         const params = {...request.query};
@@ -30,6 +33,7 @@ export const search = async (request, response) => {
     }
 }
 
+// 4.update the meeting note based on id with the updated note
 export const update = async (request, response) => {
     try {
         const id = request.params.id;
@@ -41,6 +45,7 @@ export const update = async (request, response) => {
     }
 }
 
+// 5.delete the meeting note based on id
 export const deleteNote = async (request, response) => {    
     try {
         const id = request.params.id;

@@ -36,7 +36,7 @@ export const search = async (params = {}) => {
         query.$or = [
             { title: { $regex: keyword, $options: 'i' } },
             { content: { $regex: keyword, $options: 'i' } },
-            { actionItems: { $regex: keyword, $options: 'i' } }
+            { 'actionItems.item': { $regex: keyword, $options: 'i' } }
         ];
     }
     if (startDate && endDate) {

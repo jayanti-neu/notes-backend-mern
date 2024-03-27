@@ -1,6 +1,18 @@
 // id, title, content, list of action items, and createdDate
 import mongoose from "mongoose";
 
+const actionItemSchema = new mongoose.Schema({
+    item: {
+        type: String,
+        required: true
+    },
+    completed: {
+        type: Boolean,
+        required: true,
+        default: false
+    }
+});
+
 const Schema = new mongoose.Schema({
     id: {
         type: Number, 
@@ -15,7 +27,7 @@ const Schema = new mongoose.Schema({
         required: true
     },
     actionItems: {
-        type: [String],
+        type: [actionItemSchema],
         required: false
     },
     createdDate: {

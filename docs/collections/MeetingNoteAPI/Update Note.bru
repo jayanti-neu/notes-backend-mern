@@ -5,20 +5,23 @@ meta {
 }
 
 put {
-  url: http://localhost:3000/meetingNotes/66031df72c13a0a9012d9422
+  url: http://localhost:3000/meetingNotes/66039a21ced9594dbdc499bf
   body: json
   auth: none
 }
 
 body:json {
-  
   {
-    "title": "Updated Meeting Title",
-    "content": "Updated meeting content.",
+    "title": "Updated Title",
     "actionItems": [
-      "Complete project tasks",
-      "Prepare presentation slides"
-    ],
-    "createdDate": "2024-03-27T12:00:00Z"
+      {
+        "item": "Updated action item 1",
+        "completed": true
+      },
+      {
+        "item": "Updated action item 2",
+        "completed": false
+      }
+    ]
   }
 }
